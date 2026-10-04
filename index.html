@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oğuz Alşan — Live Brand Experience | İlk Video Sunumu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient Backdrop -->
+  <div class="viewport-bg">
+    <div class="bg-grid"></div>
+    <div class="bg-subtle-glow"></div>
+    <div class="bg-noise"></div>
+  </div>
+
+  <!-- Main Presentation Container (Strict 16:9 responsive frame) -->
+  <div class="presentation-frame" id="presentationFrame">
+
+    <!-- Top Status Bar / HUD -->
+    <header class="hud-top">
+      <div class="hud-left">
+        <div class="brand-monogram">
+          <span class="mono-symbol">OA</span>
+          <span class="mono-divider">/</span>
+          <span class="mono-label">OĞUZ ALŞAN</span>
+        </div>
+        <div class="hud-tag">AI ENGINEERING &bull; BUILD IN PUBLIC</div>
+      </div>
+
+      <div class="hud-right">
+        <div class="live-indicator">
+          <span class="live-dot"></span>
+          <span class="live-text">LIVE RECORDING</span>
+        </div>
+        <div class="scene-counter" id="sceneCounter">01 / 10</div>
+      </div>
+    </header>
+
+    <!-- DEDICATED WEBCAM SAFE ZONE (Never obscured by text/content) -->
+    <aside class="webcam-zone" id="webcamZone" aria-label="Webcam Safe Zone">
+      <div class="webcam-frame-decor">
+        <div class="corner-cross c-tl">+</div>
+        <div class="corner-cross c-tr">+</div>
+        <div class="corner-cross c-bl">+</div>
+        <div class="corner-cross c-br">+</div>
+        <div class="webcam-meta">
+          <span class="meta-tag">CAM 01 // 1080p</span>
+          <span class="meta-status">RESERVED AREA</span>
+        </div>
+        <!-- Real camera preview element for live checking -->
+        <video id="webcamFeed" autoplay playsinline muted class="webcam-video"></video>
+        <div class="webcam-placeholder" id="webcamPlaceholder">
+          <div class="webcam-avatar-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="8" r="4"/>
+              <path d="M4 20c0-4 4-6 8-6s8 2 8 6"/>
+            </svg>
+          </div>
+          <span class="webcam-hint">Webcam Pozisyonu (%20 Ekran)</span>
+          <span class="webcam-subhint">Tasarım bu alanı asla kapatmaz</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- SCENE STAGE (Active slides render here) -->
+    <main class="scene-stage" id="sceneStage">
+
+      <!-- SCENE 01: THE HOOK -->
+      <section class="scene" id="scene-1" data-scene="1">
+        <div class="scene-content">
+          <div class="scene-badge step-item" data-step="1">BAŞLANGIÇ &bull; 00:00</div>
+          <h1 class="hero-name step-item" data-step="1">OĞUZ ALŞAN</h1>
+          <div class="hook-quote-wrapper step-item" data-step="2">
+            <p class="hook-primary">"Henüz yolun başındayım.</p>
+            <p class="hook-secondary">Ama durmuyorum."</p>
+          </div>
+          <div class="hook-context step-item" data-step="3">
+            <div class="context-pill">
+              <span class="pill-dot"></span>
+              <span>Yapay zeka mühendisliği, sıfırdan üretim ve gerçek bir büyüme hikayesi.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCENE 02: BEN KİMİM? -->
+      <section class="scene" id="scene-2" data-scene="2">
+        <div class="scene-content">
+          <div class="scene-badge step-item" data-step="1">KİMLİK &bull; GİRİŞ</div>
+          <h2 class="scene-title step-item" data-step="1">Ben Oğuz.</h2>
+
+          <div class="identity-flow">
+            <!-- Beat 1: Age -->
+            <div class="identity-metric step-item" data-step="2">
+              <div class="metric-number">20</div>
+              <div class="metric-info">
+                <span class="metric-label">YAŞ</span>
+                <span class="metric-desc">Sürekli öğrenen, merak eden bir zihin.</span>
+              </div>
+            </div>
+
+            <!-- Beat 2: Field -->
+            <div class="identity-metric step-item" data-step="3">
+              <div class="metric-badge-large">AI ENGINEERING</div>
+              <div class="metric-info">
+                <span class="metric-label">BÖLÜM</span>
+                <span class="metric-desc">Yapay Zekâ Mühendisliği Lisans Programı</span>
+              </div>
+            </div>
+
+            <!-- Beat 3: University & Grade -->
+            <div class="identity-metric step-item" data-step="4">
+              <div class="metric-institution">
+                <span class="inst-highlight">Alparslan Türkeş Bilim ve Teknoloji Üniversitesi</span>
+                <span class="inst-grade">2. SINIF ÖĞRENCİSİ</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="identity-footer step-item" data-step="5">
+            <div class="subtle-banner">
+              <span class="banner-dash">—</span>
+              <span>Teoriyi sınıfta bırakmayan, kod yazarak anlamlandıran bir süreç.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCENE 03: AMA BENİ SADECE ÖĞRENCİ OLARAK GÖRME -->
+      <section class="scene" id="scene-3" data-scene="3">
+        <div class="scene-content">
+          <div class="scene-badge step-item" data-step="1">DÖNÜŞÜM &bull; PERSPEKTİF</div>
+          <p class="section-lead step-item" data-step="1">Beni sadece bir öğrenci olarak görme.</p>
+
+          <!-- Dynamic Role Transformation -->
+          <div class="role-morph-showcase">
+            <div class="morph-container step-item" data-step="2">
+              <span class="static-prefix">Ben bir</span>
+              <div class="morph-focal-box">
+                <div class="morph-word active" id="morphWord">ÖĞRENCİ</div>
+              </div>
+            </div>
+
+            <!-- Narrative progression cards that unfold -->
+            <div class="morph-pillars">
+              <div class="pillar-card step-item" data-step="3" data-word="ÜRETİCİ">
+                <div class="pillar-head">
+                  <span class="pillar-num">01</span>
+                  <span class="pillar-title">ÜRETİCİ</span>
+                </div>
+                <p class="pillar-body">Ders slaytlarında kalmayan, çalışan reposu ve gerçek mimarisi olan projeler.</p>
+              </div>
+
+              <div class="pillar-card step-item" data-step="4" data-word="ÖĞRENEN">
+                <div class="pillar-head">
+                  <span class="pillar-num">02</span>
+                  <span class="pillar-title">ÖĞRENEN</span>
+                </div>
+                <p class="pillar-body">Her gün yeni bir makale, yeni bir model, yeni bir LLM aracı ve hata ayıklama.</p>
+              </div>
+
+              <div class="pillar-card step-item" data-step="5" data-word="PAYLAŞAN">
+                <div class="pillar-head">
+                  <span class="pillar-num">03</span>
+                  <span class="pillar-title">PAYLAŞAN</span>
+                </div>
+                <p class="pillar-body">Öğrendiklerini gizlemeyen; kodunu, mimarisini ve hatalarını açıkça anlatan.</p>
+              </div>
+
+              <div class="pillar-card step-item" data-step="6" data-word="GELİŞEN">
+                <div class="pillar-head">
+                  <span class="pillar-num">04</span>
+                  <span class="pillar-title">GELİŞEN</span>
+                </div>
+                <p class="pillar-body">Her gün dünden bir adım ileride olan, sürece güvenen bir mühendis adayı.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCENE 04: GITHUB KANIT ALANI (Real Projects: MARRY45) -->
+      <section class="scene" id="scene-4" data-scene="4">
+        <div class="scene-content">
+          <div class="scene-badge step-item" data-step="1">KANIT &bull; GITHUB // MARRY45</div>
+          <h2 class="scene-title step-item" data-step="1">"Ben ne üretiyorum?"</h2>
+          <p class="scene-subtitle step-item" data-step="1">Uydurma unvanlar yok. Gerçek repolar, çalışan kodlar ve test edilmiş mimariler var.</p>
+
+          <div class="github-grid">
+            <!-- Project 1: tutanak -->
+            <div class="repo-card step-item" data-step="2">
+              <div class="repo-header">
+                <div class="repo-name">
+                  <span class="repo-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg>
+                  </span>
+                  <span>tutanak</span>
+                </div>
+                <span class="repo-badge highlight">Local-First AI</span>
+              </div>
+              <p class="repo-desc">Yerel toplantı hafızası. Ses ve slaytları kaydedip arka planda not çıkaran, geçmiş toplantıları saniyesine kadar geri saran gizlilik odaklı sistem. Hiçbir veri makineden çıkmaz.</p>
+              <div class="repo-stack">
+                <span class="tech-tag">Faster-Whisper</span>
+                <span class="tech-tag">Local LLM / Ollama</span>
+                <span class="tech-tag">Windows WASAPI</span>
+                <span class="tech-tag">OCR</span>
+                <span class="tech-tag">SQLite FTS5</span>
+              </div>
+            </div>
+
+            <!-- Project 2: Workflow-Agent -->
+            <div class="repo-card step-item" data-step="3">
+              <div class="repo-header">
+                <div class="repo-name">
+                  <span class="repo-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                  </span>
+                  <span>Workflow-Agent</span>
+                </div>
+                <span class="repo-badge">Agentic AI</span>
+              </div>
+              <p class="repo-desc">Çok adımlı teknik araştırma ve kod doğrulaması yapan otonom tool-calling LLM ajan mimarisi. Test kanıtı olmadan başarı saymayan doğrulama sistemi.</p>
+              <div class="repo-stack">
+                <span class="tech-tag">Python 3.11+</span>
+                <span class="tech-tag">AsyncIO</span>
+                <span class="tech-tag">LiteLLM</span>
+                <span class="tech-tag">Tool Calling</span>
+                <span class="tech-tag">Pydantic v2</span>
+              </div>
+            </div>
+
+            <!-- Project 3: ai-resume-analyzer -->
+            <div class="repo-card step-item" data-step="4">
+              <div class="repo-header">
+                <div class="repo-name">
+                  <span class="repo-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                  </span>
+                  <span>ai-resume-analyzer</span>
+                </div>
+                <span class="repo-badge">RAG + LLM</span>
+              </div>
+              <p class="repo-desc">CV'yi hedef iş ilanına göre puanlayan, gereksinimleri CV'den alıntı kanıtla eşleyen LLM/RAG analiz servisi. Halüsinasyonu engelleyen deterministik skorlama.</p>
+              <div class="repo-stack">
+                <span class="tech-tag">Python 3.12</span>
+                <span class="tech-tag">FastAPI</span>
+                <span class="tech-tag">Gemini API</span>
+                <span class="tech-tag">Embeddings / RAG</span>
+                <span class="tech-tag">CI / Actions</span>
+              </div>
+            </div>
+
+            <!-- Project 4: FinAjan -->
+            <div class="repo-card step-item" data-step="5">
+              <div class="repo-header">
+                <div class="repo-name">
+                  <span class="repo-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="14" x="2" y="5" rx="2"/><path d="M2 10h20"/></svg>
+                  </span>
+                  <span>FinAjan</span>
+                </div>
+                <span class="repo-badge">FinTech & AI</span>
+              </div>
+              <p class="repo-desc">Kişisel finans analitiği ve anomali tespiti. Banka hareketlerini analiz eden, mükerrer işlemleri yakalayan ve yerel çalışan yapay zeka asistanı.</p>
+              <div class="repo-stack">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Anomaly Detection</span>
+                <span class="tech-tag">Local Privacy</span>
+                <span class="tech-tag">AI Assistant</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Summary Metrics -->
+          <div class="github-summary-bar step-item" data-step="6">
+            <div class="summary-stat">
+              <span class="stat-key">REPOSITORIES</span>
+              <span class="stat-val">4 Somut Proje</span>
+            </div>
+            <div class="summary-sep">/</div>
+            <div class="summary-stat">
+              <span class="stat-key">STACK</span>
+              <span class="stat-val">Whisper &bull; Local LLMs &bull; Agents &bull; RAG &bull; FastAPI</span>
+            </div>
+            <div class="summary-sep">/</div>
+            <div class="summary-stat">
+              <span class="stat-key">CORE</span>
+              <span class="stat-val">Yerel Gizlilik &bull; Açık Kaynak Mühendislik</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCENE 05: NEDEN BU KANAL? -->
+      <section class="scene" id="scene-5" data-scene="5">
+        <div class="scene-content center-focus">
+          <div class="scene-badge step-item" data-step="1">MİSYON &bull; TEMEL FELSEFE</div>
+
+          <div class="manifesto-lead step-item" data-step="1">
+            <h2 class="manifesto-title">
+              Çünkü öğrendiklerimi<br>
+              <span class="text-highlight">kendime saklamak istemiyorum.</span>
+            </h2>
+          </div>
+
+          <!-- The Core 3 Principles Flow -->
+          <div class="triad-container">
+            <div class="triad-node step-item" data-step="2">
+              <div class="triad-step">01</div>
+              <div class="triad-word">ÖĞREN</div>
+              <div class="triad-detail">Her yeni mimariyi, kütüphaneyi ve modeli derinlemesine kavra.</div>
+            </div>
+
+            <div class="triad-connector step-item" data-step="3">
+              <div class="connector-line"></div>
+              <span class="connector-arrow">&rarr;</span>
+            </div>
+
+            <div class="triad-node step-item" data-step="3">
+              <div class="triad-step">02</div>
+              <div class="triad-word">ÜRET</div>
+              <div class="triad-detail">Öğrendiklerini çalışan koda, repoya ve somut sisteme dönüştür.</div>
+            </div>
+
+            <div class="triad-connector step-item" data-step="4">
+              <div class="connector-line"></div>
+              <span class="connector-arrow">&rarr;</span>
+            </div>
+
+            <div class="triad-node step-item" data-step="4">
+              <div class="triad-step">03</div>
+              <div class="triad-word">PAYLAŞ</div>
+              <div class="triad-detail">Süreci, hataları ve çözümleri herkesle açıkça paylaş.</div>
+            </div>
+          </div>
+
+          <div class="manifesto-conclusion step-item" data-step="5">
+            <p>"Tek başına büyümek yerine, <strong>birlikte büyümek istiyorum.</strong>"</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCENE 06: KANALDA NE OLACAK? (Roadmap & Cycle) -->
+      <section class="scene" id="scene-6" data-scene="6">
+        <div class="scene-content">
+          <div class="scene-badge step-item" data-step="1">İÇERİK PLANI &bull; DİJİTAL YOL HARİTASI</div>
+          <h2 class="scene-title step-item" data-step="1">Bu kanalda ne göreceksin?</h2>
+          <p class="scene-subtitle step-item" data-step="1">Tıklama tuzağı değil; bir mühendisin laboratuvarından çıkan gerçek süreç.</p>
+
+          <div class="roadmap-stream">
+            <!-- Node 1: AI -->
+            <div class="roadmap-block step-item" data-step="2">
+              <div class="block-top">
+                <span class="block-idx">A</span>
+                <span class="block-name">GERÇEK AI TEKNOLOJİLERİ</span>
+              </div>
+              <p class="block-desc">LLM'ler, RAG mimarileri, Agentic workflows, vektör veritabanları ve modern modellerin iç işleyişi.</p>
+            </div>
+
+            <!-- Node 2: PROJECTS -->
+            <div class="roadmap-block step-item" data-step="3">
+              <div class="block-top">
+                <span class="block-idx">B</span>
+                <span class="block-name">SIFIRDAN PROJELER</span>
+              </div>
+              <p class="block-desc">Fikirden deploy aşamasına: FastAPI backend'leri, ajan prototipleri, gerçek veriyle çalışan sistemler.</p>
+            </div>
+
+            <!-- Node 3: BUILD IN PUBLIC -->
+            <div class="roadmap-block step-item" data-step="4">
+              <div class="block-top">
+                <span class="block-idx">C</span>
+                <span class="block-name">BUILD IN PUBLIC</span>
+              </div>
+              <p class="block-desc">Hataları gizlemeden. Çöken build'ler, refactor süreçleri ve 'neden çalışmadı?' analizleri.</p>
+            </div>
+
+            <!-- Node 4: EXPERIMENTS & CAREER -->
+            <div class="roadmap-block step-item" data-step="5">
+              <div class="block-top">
+                <span class="block-idx">D</span>
+                <span class="block-name">DENEYLER & KARİYER</span>
+              </div>
+              <p class="block-desc">Yeni çıkan araçların stres testleri ve 20 yaşında bir AI mühendisliği öğrencisinin gelişim rotası.</p>
+            </div>
+          </div>
+
+          <!-- Dynamic Cycle Strip -->
+          <div class="engineering-cycle step-item" data-step="6">
+            <span class="cycle-label">DÖNGÜ:</span>
+            <span class="cycle-node">FİKİR</span>
+            <span class="cycle-sep">&rarr;</span>
+            <span class="cycle-node">KOD</span>
+            <span class="cycle-sep">&rarr;</span>
+            <span class="cycle-node alert">HATA (FAIL)</span>
+            <span class="cycle-sep">&rarr;</span>
+            <span class="cycle-node">ÖĞREN (LEARN)</span>
+            <span class="cycle-sep">&rarr;</span>
+            <span class="cycle-node success">İNŞA ET (BUILD)</span>
+            <span class="cycle-sep">&rarr;</span>
+            <span class="cycle-node accent">PAYLAŞ</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCENE 07: BEN SİZE HOCALIK YAPMAYACAĞIM -->
+      <section class="scene" id="scene-7" data-scene="7">
+        <div class="scene-content">
+          <div class="scene-badge step-item" data-step="1">SAMİMİYET &bull; SÖZLEŞME</div>
+
+          <div class="sincerity-container">
+            <div class="sincerity-statement step-item" data-step="2">
+              <span class="statement-prefix">Dürüst olmak gerekirse:</span>
+              <h2 class="statement-large">Ben size öğretmenlik yapmaya gelmedim.</h2>
+            </div>
+
+            <div class="sincerity-bridge step-item" data-step="3">
+              <div class="bridge-divider"></div>
+              <h3 class="statement-highlight">Ben de öğreniyorum.</h3>
+            </div>
+
+            <div class="sincerity-contract step-item" data-step="4">
+              <div class="contract-card">
+                <div class="contract-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                  </svg>
+                </div>
+                <div class="contract-text">
+                  <p class="contract-primary">"Kürsüden ders anlatan biri değil; sizinle aynı masada kod yazan, aynı terminal hatalarıyla boğuşan bir yol arkadaşı."</p>
+                  <p class="contract-secondary">Ben öğrendikçe paylaşacağım. Siz öğrendikçe birlikte büyüyeceğiz.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCENE 08: VİZYON -->
+      <section class="scene" id="scene-8" data-scene="8">
+        <div class="scene-content center-focus">
+          <div class="scene-badge step-item" data-step="1">VİZYON &bull; UZUN VADE</div>
+
+          <div class="vision-manifesto">
+            <h1 class="vision-huge step-item" data-step="2">
+              BİR GÜN<br>
+              GERİYE DÖNÜP<br>
+              <span class="text-glow">BU YOLCULUĞA BAKMAK.</span>
+            </h1>
+
+            <div class="vision-subline step-item" data-step="3">
+              <p class="vision-intimate">...ve bunu tek başıma yapmamış olmak.</p>
+            </div>
+
+            <div class="vision-foot step-item" data-step="4">
+              <span class="vision-date">2026'dan geleceğe bırakılan ilk dijital imza.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCENE 09: CALL TO ACTION -->
+      <section class="scene" id="scene-9" data-scene="9">
+        <div class="scene-content">
+          <div class="scene-badge step-item" data-step="1">BİRLİKTE &bull; DEVAM</div>
+
+          <div class="cta-container">
+            <div class="cta-message step-item" data-step="2">
+              <h2 class="cta-headline">
+                Eğer sen de öğreniyorsan,<br>
+                <span class="text-highlight">burada kal.</span>
+              </h2>
+              <p class="cta-sub">Abone ol butonları veya klişeler değil; üretmeye devam eden bir topluluğun parçası olmak.</p>
+            </div>
+
+            <div class="cta-profile-card step-item" data-step="3">
+              <div class="profile-header">
+                <div class="profile-avatar">OA</div>
+                <div class="profile-meta">
+                  <div class="profile-name">Oğuz Alşan</div>
+                  <div class="profile-title">AI Engineering Student &bull; Builder</div>
+                </div>
+              </div>
+
+              <div class="profile-links">
+                <a class="profile-link" href="https://github.com/MARRY45" target="_blank" rel="noopener">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
+                    <path d="M9 18c-4.51 2-5-2-7-2"/>
+                  </svg>
+                  <span class="link-label">github.com/MARRY45</span>
+                  <span class="link-tag">PROJELERİ İNCELE</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCENE 10: END / MONOGRAM -->
+      <section class="scene" id="scene-10" data-scene="10">
+        <div class="scene-content center-focus">
+          <div class="end-monogram step-item" data-step="1">
+            <div class="end-oa-box">
+              <span class="end-oa-letter">O</span>
+              <span class="end-oa-letter">A</span>
+            </div>
+          </div>
+
+          <div class="end-motto-wrap step-item" data-step="2">
+            <h1 class="end-motto">BUILD. LEARN. SHARE.</h1>
+          </div>
+
+          <div class="end-author-wrap step-item" data-step="3">
+            <div class="end-author-name">OĞUZ ALŞAN</div>
+            <div class="end-author-title">Yapay Zekâ Mühendisliği</div>
+            <div class="end-terminal-note">Session 001 // Completed.</div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Bottom HUD Controls & Timeline Navigation -->
+    <footer class="hud-bottom">
+      <div class="controls-left">
+        <button class="hud-btn" id="btnPrev" title="Önceki Adım (Sol Ok / Backspace)">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg>
+          <span>GERİ</span>
+        </button>
+        <button class="hud-btn primary" id="btnNext" title="Sonraki Adım (Sağ Ok / Space)">
+          <span>İLERİ</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+      </div>
+
+      <div class="timeline-indicator" id="timelineBar">
+        <!-- 10 scene step pips dynamically generated -->
+      </div>
+
+      <div class="controls-right">
+        <button class="hud-btn mini" id="btnCamToggle" title="Webcam Önizlemesini Aç/Kapat (Klavye: W)">
+          <span class="btn-dot cam-dot"></span>
+          <span>CAM TEST</span>
+        </button>
+        <button class="hud-btn mini" id="btnNotesToggle" title="Konuşmacı İpuçları Paneli (Klavye: T)">
+          <span>İPUÇLARI [T]</span>
+        </button>
+        <button class="hud-btn mini" id="btnFullscreen" title="Tam Ekran Modu (Klavye: F)">
+          <span id="fsLabel">FULLSCREEN [F]</span>
+        </button>
+      </div>
+    </footer>
+
+    <!-- Speaker Cue Drawer (Teleprompter Hints - Toggleable via 'T' or button) -->
+    <aside class="speaker-drawer" id="speakerDrawer">
+      <div class="drawer-header">
+        <span class="drawer-title">KONUŞMACI REHBERİ // NE SÖYLEYECEKSİN?</span>
+        <button class="drawer-close" id="drawerClose">&times;</button>
+      </div>
+      <div class="drawer-body" id="drawerCues">
+        <!-- Populated dynamically per scene & step -->
+      </div>
+    </aside>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
